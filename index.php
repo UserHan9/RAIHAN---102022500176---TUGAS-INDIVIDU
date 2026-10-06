@@ -88,7 +88,7 @@ if(isset($_POST["submit"])){
         margin-bottom: 15px;
     }
 
-    .hapus {
+    .hapus,.edit {
         display: inline-block;
         margin-top: 10px;
         padding: 7px 12px;
@@ -151,9 +151,9 @@ if(isset($_POST["submit"])){
                     <strong>Jenis Mobil:</strong><?php echo $row["jenis_mobil"]; ?>
                     <br>
 
-                    <a class="hapus" href="delete.php?id=<?php echo $row["id"]; ?>"onclick="return confirm('Yakin ingin menghapus data ini?')">
-                        Hapus
-                    </a>
+                   <a class="edit" href="edit.php?id=<?php echo $row["id"]; ?>">Edit</a>
+
+                    <a class="hapus" href="delete.php?id=<?php echo $row["id"]; ?>" onclick="return confirm('Yakin ingin menghapus data ini?')"> Hapus</a>
 
                 </li>
             <?php
